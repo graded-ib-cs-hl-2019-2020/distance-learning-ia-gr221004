@@ -586,7 +586,7 @@ public class View extends javax.swing.JFrame {
             desk.studentName.setText(arrayList.get(i));
             
             } 
-        } else {
+        } else if (counter > 1) {
             System.out.println("Error! No duplicate desks allowed.");
         }
     }//GEN-LAST:event_viewDesksBtnMouseClicked
