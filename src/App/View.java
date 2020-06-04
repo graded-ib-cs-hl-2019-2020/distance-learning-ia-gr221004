@@ -22,14 +22,22 @@ import java.util.List;
  */
 public class View extends javax.swing.JFrame {
 
-    /**
-     * Creates new form View
-     * 
-     */
+    /*
+    This class holds the heart and soul of this project. It stems from user input
+    as well as being able to directly and easily communicate with 
+    Netbeans-Java features. This is where most of my code lies.
+    */
     
+    // controls all aspects of JList automatically, implementing a basic list model
     DefaultListModel<String> listModel = new DefaultListModel();
+    
+    // creating the arrayList that is the clas slist
     public static ArrayList<String> arrayList = new ArrayList<>();
-    boolean flag = true; // (to stop multiple entries)
+    
+    // to stop multiple entries in file
+    boolean flag = true;
+    
+    // creates the counter that lets the "view desks" button know how many times its been clicked
     int counter = 0;
     
     public View() {
@@ -363,26 +371,35 @@ public class View extends javax.swing.JFrame {
     
     
     private void finishedInputBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finishedInputBtnActionPerformed
+
+        // makes the window become "hidden" so user returns to main screen
         dialog.setVisible(false);
        
     }//GEN-LAST:event_finishedInputBtnActionPerformed
 
     private void importCLBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_importCLBtnActionPerformed
+        /* 
+        I decided to use a BufferedReader to get long strings from a txt document
+        to be able to import it into the current class list. The buffering makes
+        reading of files efficient.
+        */
         if (flag) {
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader("Student List.txt"));
-            //read the first line from file (int value, # of entries in file)
+            
+            //reads the first line from file (int value, # of entries in file)
             int val = Integer.parseInt(br.readLine());
             for (int i = 0; i<val; i++) {
-                // read data from file
+                // reads data from file
                 String name = br.readLine();
-                // add data to listModel object
+                
+                // adds data to listModel object
                listModel.addElement(name);
             }
-            // store listModel to jList object
+            // stores listModel to JList object
             jList.setModel(listModel);
-            // control multiple entries
+            // controls multiple entries
             flag = false;
         } catch (IOException | NumberFormatException e){
             System.out.println("" + e);
@@ -397,10 +414,17 @@ public class View extends javax.swing.JFrame {
     }//GEN-LAST:event_importCLBtnActionPerformed
 
     private void studentListBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentListBtnActionPerformed
+        
+        // makes the officially separated student groups list appear blank
         separatedStudentsText.setText("");
+        
+        // clears the class list array to create a new class list, but previous list still appears on JList
         arrayList.clear();
+        
+        // resets the counter
         counter = 0;
         
+        // makes student input window visible
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
         dialog.setBounds((screenSize.width-700)/2, (screenSize.height-450)/2, 700, 450);
         dialog.setVisible(true);
@@ -408,81 +432,107 @@ public class View extends javax.swing.JFrame {
     }//GEN-LAST:event_studentListBtnActionPerformed
     
     public void convertRandomize() {
+        // converts JList to an ArrayList
         int size = jList.getModel().getSize();
         for(int i=0; i < size ; i++){
             arrayList.add(jList.getModel().getElementAt(i));
         }
         
+        // shuffles/randomizes the arrayList
         Collections.shuffle(arrayList);
 
     }
     
     private void addStudentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addStudentBtnActionPerformed
 
+        // adds input to JList
         add(input.getText());
-        //clear
+        
+        //clears input box
         input.setText("");
     }//GEN-LAST:event_addStudentBtnActionPerformed
 
     private void add(String input){
+        
+        // makes JList follow DefaultListModel, which essentially controls everything in JList
         jList.setModel(listModel);
+        
+        // adds input as an accepted source to the model's contents
         listModel.addElement(input);
         
     }
     
     private void editStudentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editStudentBtnActionPerformed
+        
+        // allows user to select and edit whichever part of student's name they want to, and change it by clicking the button
         int index = jList.getSelectedIndex();
         listModel.setElementAt(input.getText(), index);
         
-        //clear
+        //clears input box
         input.setText("");
     }//GEN-LAST:event_editStudentBtnActionPerformed
 
     private void removeStudentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeStudentBtnActionPerformed
+        
+        // allows the user to select a name and remove it from the list
         int index = jList.getSelectedIndex();
         listModel.removeElementAt(index);
         
-        //clear
+        //clears input box
         input.setText("");
     }//GEN-LAST:event_removeStudentBtnActionPerformed
 
     private void clearListBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearListBtnActionPerformed
+        
+        //clears JList and resets the model
         listModel.clear();
         jList.setModel(listModel);
     }//GEN-LAST:event_clearListBtnActionPerformed
 
     private void jListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jListMouseClicked
+        
+        // when the mouse clicks on an item on the JList, it will be selected
         String selected = jList.getSelectedValue();
         input.setText(selected);
     }//GEN-LAST:event_jListMouseClicked
 
     private void exportCLBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exportCLBtnActionPerformed
+        /*
+        I decided to use PrintWriter because it's the equivalent of FileWriter,
+        but it uses println to write to file, which is a lot easier to manage.
+        */
+        
         PrintWriter writer = null;
-        //get the size of jlist and store in variable
+        
+        // gets the size of JList and store in variable
         int val = jList.getModel().getSize();
         try {
             writer = new PrintWriter("Student List.txt");
-            //write size of jlist to file to help store # of entries using loop
+            
+            // writes size of JList to file to help store # of entries using loop
             writer.println(val);
+            
             for (int i=0; i<val; i++) {
-                // get the element from jlist through index
+                // gets the element from JList through index
                 writer.println(jList.getModel().getElementAt(i));
             }
         } catch (FileNotFoundException e) {
             System.out.println("" + e);
         } finally {
-            //forget to close file
+            
+            // forget to close file
             writer.close();
         }
     }//GEN-LAST:event_exportCLBtnActionPerformed
 
     private void nGroupsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nGroupsBtnActionPerformed
+
         convertRandomize();
         
+        // converts text acquired from input box for # of ppl per group into an integer
         int numGroups = Integer.parseInt(nGroups.getText());
         
         //split into groups and display in text area
-        
         StringBuilder b = new StringBuilder();
         for (List<String> part : Partition.ofSize(arrayList, numGroups)) {
             b.append(part + "\n"); 
@@ -496,6 +546,10 @@ public class View extends javax.swing.JFrame {
 
         counter++;
         
+        /*
+        If the button has been clicked only once, the desks will appear normally.
+        The desks won't duplicate even if the user clicks again.
+        */
         if (counter == 1) {
             for (int i=0; i < arrayList.size(); i++){
             Desk desk = new Desk();
@@ -504,7 +558,7 @@ public class View extends javax.swing.JFrame {
             
             } 
         } else {
-            System.out.println("No duplicate desks!");
+            System.out.println("Error! No duplicate desks allowed.");
         }
     }//GEN-LAST:event_viewDesksBtnMouseClicked
 

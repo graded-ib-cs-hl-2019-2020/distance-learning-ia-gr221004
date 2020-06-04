@@ -9,7 +9,12 @@ package App;
  *
  * @author isa
  */
-public class Main {
+public class Display {
+    
+    /*
+    This class was just used to properly display the application.
+    It looked very strange when I tried to remove this and make View the main class.
+    */
     
     private static View view;
 

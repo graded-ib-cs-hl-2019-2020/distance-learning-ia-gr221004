@@ -14,6 +14,14 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 public final class Partition<T> extends AbstractList<List<T>> {
+    
+    /* 
+    The purpose of this class is to cut up the initial class list ArrayList 
+    into chunks after being randomized so they are sorted into groups.
+    This is a separate class because this code consists only of mathematical
+    operations, which I did not think necessary to interfere with the official
+    set-up and running of the program.
+    */
 
     private final List<T> list;
     private final int chunkSize;

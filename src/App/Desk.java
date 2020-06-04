@@ -11,9 +11,12 @@ package App;
  */
 public class Desk extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form Desk
-     */
+    
+    /* 
+    This class's code is blank, but it represents a Desk object.
+    Its purpose is to easily create desk objects and add as many as needed with
+    student names already on them on the "classroom" floor plan.
+    */
     public Desk() {
         initComponents();
     }
