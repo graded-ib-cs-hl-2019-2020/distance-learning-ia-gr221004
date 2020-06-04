@@ -460,7 +460,7 @@ public class View extends javax.swing.JFrame {
         
     }//GEN-LAST:event_studentListBtnActionPerformed
     
-    public void convertRandomize() {
+    private void convertRandomize() {
         // converts JList to an ArrayList
         int size = jList.getModel().getSize();
         for(int i=0; i < size ; i++){
