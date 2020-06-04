@@ -90,9 +90,10 @@ public class View extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(700, 450));
         jPanel1.setSize(new java.awt.Dimension(700, 450));
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 20)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("SansSerif", 0, 22)); // NOI18N
         jLabel1.setText("Input Students Here");
 
+        finishedInputBtn.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         finishedInputBtn.setText("List Completed");
         finishedInputBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,6 +101,7 @@ public class View extends javax.swing.JFrame {
             }
         });
 
+        jList.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         jList.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jListMouseClicked(evt);
@@ -107,11 +109,13 @@ public class View extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jList);
 
-        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 20)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("SansSerif", 0, 22)); // NOI18N
         jLabel2.setText("Student List");
 
+        jLabel3.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         jLabel3.setText("File name must be \"Student List.txt\"");
 
+        addStudentBtn.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         addStudentBtn.setText("Add Student");
         addStudentBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,6 +123,7 @@ public class View extends javax.swing.JFrame {
             }
         });
 
+        editStudentBtn.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         editStudentBtn.setText("Edit and Update Student");
         editStudentBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,6 +131,7 @@ public class View extends javax.swing.JFrame {
             }
         });
 
+        clearListBtn.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         clearListBtn.setText("Clear List");
         clearListBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,6 +139,7 @@ public class View extends javax.swing.JFrame {
             }
         });
 
+        removeStudentBtn.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         removeStudentBtn.setText("Remove Student");
         removeStudentBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,6 +147,7 @@ public class View extends javax.swing.JFrame {
             }
         });
 
+        importCLBtn.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         importCLBtn.setText("Import Class List");
         importCLBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,6 +155,7 @@ public class View extends javax.swing.JFrame {
             }
         });
 
+        exportCLBtn.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         exportCLBtn.setText("Export Class List");
         exportCLBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,10 +163,17 @@ public class View extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         jLabel4.setText("enter one by one to add, click on student name to edit/remove");
 
+        jLabel5.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         jLabel5.setText("Into groups of how many would you like them to be sorted into?");
 
+        nGroups.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+
+        input.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+
+        nGroupsBtn.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         nGroupsBtn.setText("Done");
         nGroupsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,8 +196,13 @@ public class View extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(73, 73, 73)
                         .addComponent(jLabel2)
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel3)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(48, 48, 48)
+                                .addComponent(jLabel3))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(81, 81, 81)
+                                .addComponent(importCLBtn)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
@@ -190,6 +211,12 @@ public class View extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(addStudentBtn)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(clearListBtn)
+                                .addGap(30, 30, 30)
+                                .addComponent(removeStudentBtn))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addGap(0, 14, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,23 +233,16 @@ public class View extends javax.swing.JFrame {
                                         .addComponent(finishedInputBtn)
                                         .addGap(162, 162, 162))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(input, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(153, 153, 153))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(addStudentBtn)
-                                .addGap(32, 32, 32)
-                                .addComponent(clearListBtn)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(removeStudentBtn))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(importCLBtn)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(exportCLBtn)
-                                .addGap(38, 38, 38))))
+                                        .addComponent(exportCLBtn)
+                                        .addGap(38, 38, 38))))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel5)
-                        .addGap(22, 22, 22))))
+                        .addGap(22, 22, 22))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(155, 155, 155)
+                        .addComponent(input, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -235,7 +255,7 @@ public class View extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(importCLBtn)
                             .addComponent(exportCLBtn))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -281,6 +301,7 @@ public class View extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(700, 500));
         setSize(new java.awt.Dimension(700, 500));
 
+        studentListBtn.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         studentListBtn.setText("Input Students");
         studentListBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -288,28 +309,32 @@ public class View extends javax.swing.JFrame {
             }
         });
 
+        jDesktopPane1.setBackground(new java.awt.Color(184, 226, 242));
+
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 542, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 412, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        sortedLabel.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        sortedLabel.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         sortedLabel.setText("Sorted Students");
 
         separatedStudentsText.setColumns(1);
+        separatedStudentsText.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         separatedStudentsText.setLineWrap(true);
         separatedStudentsText.setRows(10);
         jScrollPane1.setViewportView(separatedStudentsText);
 
-        jLabel6.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
         jLabel6.setText("Welcome To Student Seating Sorter!");
 
+        viewDesksBtn.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         viewDesksBtn.setText("View Desks");
         viewDesksBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -323,45 +348,47 @@ public class View extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(studentListBtn)
                         .addGap(50, 50, 50)
                         .addComponent(jLabel6))
-                    .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jDesktopPane1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jScrollPane1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(69, 69, 69)
-                                .addComponent(sortedLabel)
-                                .addGap(0, 68, Short.MAX_VALUE)))
+                        .addComponent(jScrollPane1)
                         .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(83, 83, 83)
-                        .addComponent(viewDesksBtn)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 27, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(sortedLabel)
+                                .addGap(36, 36, 36))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(viewDesksBtn)
+                                .addGap(48, 48, 48))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(studentListBtn)
-                    .addComponent(jLabel6)
-                    .addComponent(viewDesksBtn))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(studentListBtn)
+                            .addComponent(jLabel6)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(viewDesksBtn)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 6, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(sortedLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane1)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jDesktopPane1))
                 .addContainerGap())
         );
 

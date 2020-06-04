@@ -64,8 +64,16 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+                                      <Component id="importCLBtn" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -77,6 +85,13 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="addStudentBtn" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="clearListBtn" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="removeStudentBtn" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace min="0" pref="14" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -97,23 +112,10 @@
                                               <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
-                                              <Component id="input" min="-2" pref="141" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="153" max="-2" attributes="0"/>
+                                              <Component id="exportCLBtn" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="addStudentBtn" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                      <Component id="clearListBtn" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="removeStudentBtn" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="importCLBtn" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="exportCLBtn" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -121,6 +123,11 @@
                               <EmptySpace max="32767" attributes="0"/>
                               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
+                              <Component id="input" min="-2" pref="141" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -138,7 +145,7 @@
                                   <Component id="importCLBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="exportCLBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="24" max="32767" attributes="0"/>
+                              <EmptySpace pref="22" max="32767" attributes="0"/>
                               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel4" min="-2" pref="25" max="-2" attributes="0"/>
@@ -178,13 +185,16 @@
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Lucida Grande" size="20" style="0"/>
+                  <Font name="SansSerif" size="22" style="0"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Input Students Here"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="finishedInputBtn">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="13" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="List Completed"/>
               </Properties>
               <Events>
@@ -200,6 +210,9 @@
               <SubComponents>
                 <Component class="javax.swing.JList" name="jList">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="SansSerif" size="12" style="0"/>
+                    </Property>
                     <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
                       <StringArray count="0"/>
                     </Property>
@@ -216,18 +229,24 @@
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Lucida Grande" size="20" style="0"/>
+                  <Font name="SansSerif" size="22" style="0"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Student List"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="13" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="File name must be &quot;Student List.txt&quot;"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="addStudentBtn">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="13" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Add Student"/>
               </Properties>
               <Events>
@@ -236,6 +255,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="editStudentBtn">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="13" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Edit and Update Student"/>
               </Properties>
               <Events>
@@ -244,6 +266,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="clearListBtn">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="13" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Clear List"/>
               </Properties>
               <Events>
@@ -252,6 +277,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="removeStudentBtn">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="13" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Remove Student"/>
               </Properties>
               <Events>
@@ -260,6 +288,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="importCLBtn">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="13" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Import Class List"/>
               </Properties>
               <Events>
@@ -268,6 +299,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="exportCLBtn">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="13" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Export Class List"/>
               </Properties>
               <Events>
@@ -276,20 +310,39 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="13" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="enter one by one to add, click on student name to edit/remove"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel5">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="13" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Into groups of how many would you like them to be sorted into?"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="nGroups">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="13" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="input">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="13" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="nGroupsBtn">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="13" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Done"/>
               </Properties>
               <Events>
@@ -337,33 +390,32 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" attributes="0">
                       <Component id="studentListBtn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jDesktopPane1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jDesktopPane1" max="32767" attributes="0"/>
               </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                              <Component id="sortedLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="68" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
+                      <Component id="jScrollPane1" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
-                      <Component id="viewDesksBtn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="27" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="sortedLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="viewDesksBtn" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
               </Group>
           </Group>
@@ -372,23 +424,28 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="studentListBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="viewDesksBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="studentListBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="viewDesksBtn" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="jDesktopPane1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Component id="sortedLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="399" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="jDesktopPane1" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -398,6 +455,9 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="studentListBtn">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="SansSerif" size="13" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Input Students"/>
       </Properties>
       <Events>
@@ -405,16 +465,21 @@
       </Events>
     </Component>
     <Container class="javax.swing.JDesktopPane" name="jDesktopPane1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="f2" green="e2" red="b8" type="rgb"/>
+        </Property>
+      </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="542" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="412" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -422,7 +487,7 @@
     <Component class="javax.swing.JLabel" name="sortedLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Lucida Grande" size="18" style="0"/>
+          <Font name="SansSerif" size="18" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Sorted Students"/>
       </Properties>
@@ -437,6 +502,9 @@
         <Component class="javax.swing.JTextArea" name="separatedStudentsText">
           <Properties>
             <Property name="columns" type="int" value="1"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="SansSerif" size="13" style="0"/>
+            </Property>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="10"/>
           </Properties>
@@ -446,13 +514,16 @@
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="SansSerif" size="18" style="1"/>
+          <Font name="SansSerif" size="24" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Welcome To Student Seating Sorter!"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="viewDesksBtn">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="SansSerif" size="13" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="View Desks"/>
       </Properties>
       <Events>

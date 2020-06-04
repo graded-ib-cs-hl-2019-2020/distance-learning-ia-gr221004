@@ -32,8 +32,8 @@ public class Desk extends javax.swing.JInternalFrame {
 
         studentName = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(156, 111, 77));
-        setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Desk", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 0, 13), new java.awt.Color(255, 255, 255))); // NOI18N
+        setBackground(new java.awt.Color(156, 121, 100));
+        setBorder(javax.swing.BorderFactory.createTitledBorder("Desk"));
 
         studentName.setForeground(new java.awt.Color(255, 255, 255));
         studentName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
