@@ -1,30 +1,26 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package App;
 
 /**
  *
- * @author novac
+ * @author isa
  */
 public class Main {
+    
+    private static View view;
 
     /**
      * @param args the command line arguments
      */
-    private static GUI gui;
-    private static int count = 0;
-    
     public static void main(String[] args) {
-        /* Create and display the GUI */
-        gui = new GUI();
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                gui.setVisible(true);
-            }
-        });
+        view = new View();
+        view.setVisible(true);
     }
-    
-    public static void btnTheButtonPressed() {
-        count++;
-        gui.setButtonText("Pressed " + count + " times!");
-    }
+
+
     
 }
